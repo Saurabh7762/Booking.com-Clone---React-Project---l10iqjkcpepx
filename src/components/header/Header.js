@@ -82,7 +82,7 @@ export default function Header({ type }) {
                         </h1>
                         <p className="headerDesc">
                             Get rewarded for your travels – unlock instant savings of 10% or
-                            more with a free Lamabooking account
+                            more.
                         </p>
                         <button className="headerBtn" onClick={handeRegisSign}>Sign in / Register</button>
                         <div className="headerSearch">
