@@ -19,14 +19,14 @@ const App = () => {
       <Routes>
         <Route path="/register" element={<Register type="list" />}></Route>
         <Route path="/" element={<LogIn />}></Route>
-        <Route path="/Home" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
         <Route path="/hotels" element={<List />}></Route>
         <Route path="/hotel_id" element={<Hotel />}></Route>
         <Route path="/checkout" element={<CheckOut />}></Route>
         <Route path="/flight" element={<Flight />}></Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 

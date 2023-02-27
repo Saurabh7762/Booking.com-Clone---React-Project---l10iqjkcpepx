@@ -19,18 +19,18 @@ export default function Navbar({ type }) {
     }
 
     const handelLogIn = () => {
-        lgIn("/Login");
+        lgIn("/");
     }
 
     const handelLogout = () => {
         localStorage.clear("userDetails");
-        Lgot("/register");
+        Lgot("/");
     }
 
     return (
         <div className="navbar">
             <div className="navContainer">
-                <span className="logo">Welcome to BOOKING.COM</span>
+                <span className="logo">BOOKING.COM</span>
                 <div className="navItems">
                     {type !== "logOut" ? <>
                         <button className="navButton" onClick={handelRegis}>Register</button>
