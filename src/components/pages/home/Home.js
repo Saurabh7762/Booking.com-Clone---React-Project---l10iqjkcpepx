@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Featured from '../../Featured/Featured'
 import FeaturedProperties from '../../FeaturedProperties/FeaturedProperties'
 import Footer from '../../footer/Footer'
@@ -11,28 +11,28 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    useEffect(() => {
+  useEffect(() => {
         if (!localStorage.getItem("userDetails")) {
-            navigate("/register");
+            navigate("/login");
         }
     });
 
-    return (
-        <>
-            <Navbar type="logOut" />
-            <Header />
-            <div className="homeContainer">
-                <Featured />
-                <h1 className="homeTitle">Browse by property type</h1>
-                <PropertyList />
-                <h1 className="homeTitle">Homes guests love</h1>
-                <FeaturedProperties />
-                <MailList />
-                <Footer />
-            </div>
-        </>
-    )
+
+  return (
+    <>
+      <Navbar type="logOut" />
+      <Header />
+      <div className="homeContainer">
+        <Featured />
+        <h1 className="homeTitle">Browse by property type</h1>
+        <PropertyList />
+        <h1 className="homeTitle">Homes guests love</h1>
+        <FeaturedProperties />
+        <MailList />
+        <Footer />
+      </div>
+    </>
+  );
 }

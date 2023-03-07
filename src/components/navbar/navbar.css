@@ -27,4 +27,9 @@
     color: #003580;
     border-radius: 2px;
     box-shadow: 3px 3px 8px black 0.1;
+    height: 35px;
+    font-size: medium;
+  }
+  .navButton:hover{
+    background-color:#e4f4ff;
   }

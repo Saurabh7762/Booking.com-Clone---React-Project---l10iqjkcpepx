@@ -21,12 +21,16 @@ export default function Hotel() {
   const [open, setOpen] = useState(false);
 
   const navigate = useNavigate();
+  const checkOt = useNavigate();
 
   useEffect(() => {
     if (!localStorage.getItem("userDetails")) {
       navigate("/register");
     }
   });
+  const handelCheckOut = () => {
+    checkOt("/checkout");
+  };
 
   const photos = [
     {
@@ -94,7 +98,9 @@ export default function Hotel() {
           </div>
         )}
         <div className="hotelWrapper">
-          <button className="bookNow">Reserve or Book Now!</button>
+          <button className="bookNow" onClick={handelCheckOut}>
+            Reserve or Book Now!
+          </button>
           <h1 className="hotelTitle">Tower Street Apartments</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
@@ -104,7 +110,8 @@ export default function Hotel() {
             Excellent location – 500m from center
           </span>
           <span className="hotelPriceHighlight">
-            Book a stay over 1499.Rs at this property and get a free airport taxi <span className='zoomImg'>Click on Image</span>
+            Book a stay over 1499.Rs at this property and get a free airport
+            taxi <span className="zoomImg">Click on Image</span>
           </span>
           <div className="hotelImages">
             {photos.map((photo, i) => (
@@ -144,7 +151,7 @@ export default function Hotel() {
               <h2>
                 <b>9945.Rs</b> (9 nights)
               </h2>
-              <button>Reserve or Book Now!</button>
+              <button onClick={handelCheckOut}>Reserve or Book Now!</button>
             </div>
           </div>
         </div>
@@ -152,8 +159,7 @@ export default function Hotel() {
         <div className="mt-4">
           <Footer />
         </div>
-
       </div>
     </div>
-  )
+  );
 }

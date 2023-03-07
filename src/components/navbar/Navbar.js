@@ -24,7 +24,7 @@ export default function Navbar({ type }) {
 
     const handelLogout = () => {
         localStorage.clear("userDetails");
-        Lgot("/");
+        Lgot("/login");
     }
 
     return (
